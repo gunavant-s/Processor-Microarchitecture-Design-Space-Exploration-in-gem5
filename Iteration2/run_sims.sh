@@ -17,18 +17,18 @@ ISSUE_WIDTH=8        # Corresponds to issueWidth
 # These are often linked. Use '-' to let gem5 use defaults.
 BP_LOCAL_PRED_SIZE=1024 # Parameter: system.cpu[:].branchPred.localPredictorSize
 BP_BTB_ENTRIES=512    # Parameter: system.cpu[:].branchPred.BTBEntries
-BP_BTB_TAG_SIZE=9    # Related BTB parameter (often adjusted with BTBEntries)
+BP_BTB_TAG_SIZE=10    # Related BTB parameter (often adjusted with BTBEntries)
 
 # 4. Load/Store Queue Size
-LQ_ENTRIES=32         # Parameter: system.cpu[:].LQEntries
-SQ_ENTRIES=32         # Parameter: system.cpu[:].SQEntries
+LQ_ENTRIES=64         # Parameter: system.cpu[:].LQEntries
+SQ_ENTRIES=64         # Parameter: system.cpu[:].SQEntries
 
 # 5. Number of Integer ALUs and Multiplier/Divider Units
 # Corresponds to FUList indices. Use '-' to let gem5 use defaults.
 # Index 0: IntALU
-FU_INT_ALU_COUNT=2
+FU_INT_ALU_COUNT=8
 # Index 1: IntMultDiv (Often combined, includes multiplier and divider)
-FU_INT_MULT_DIV_COUNT=1
+FU_INT_MULT_DIV_COUNT=3
 
 # 6. Number of Floating-point ALUs and Multiplier/Divider Units
 # Corresponds to FUList indices. Use '-' to let gem5 use defaults.
@@ -43,7 +43,7 @@ ENABLE_CACHES=true    # Flag: --caches (enables L1 caches)
 ENABLE_L2CACHE=true   # Flag: --l2cache (adds an L2 cache)
 
 L1I_SIZE="16kB"       # Param: --l1i_size
-L1I_ASSOC=2           # Param: --l1i_assoc
+L1I_ASSOC=4           # Param: --l1i_assoc
 L1D_SIZE="256kB"      # Param: --l1d_size
 L1D_ASSOC=32          # Param: --l1d_assoc
 L2_SIZE="1MB"         # Param: --l2_size
