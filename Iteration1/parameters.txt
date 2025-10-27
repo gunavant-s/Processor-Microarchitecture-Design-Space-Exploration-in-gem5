@@ -1,0 +1,14 @@
+localPredictorSize =   1024
+BTBEntries         =   512
+BTBTagSize         =   9
+
+
+localPredictorSize: This is the "memory" for predicting direction.
+                    It sets the number of 2-bit counters used to guess IF a branch will be taken (Yes/No). 
+                    A size of 1024 means it can track the specific history for 1024 different branches.
+
+BTBEntries:         This is the "address book" for predicting the target. 
+                    It sets the number of slots available to store WHERE a branch will jump to. A size of 512 means it can "remember" the target addresses for 512 different branches.
+
+Tagsize:            This is the "ID check" for the BTB. It's the number of bits used to CONFIRM that the branch at a certain address is the same one stored in the BTB. 
+                    A larger tag reduces the chance of mistaking one branch for another (aliasing).
