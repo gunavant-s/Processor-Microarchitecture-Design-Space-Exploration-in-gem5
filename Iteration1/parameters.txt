@@ -1,3 +1,6 @@
+fetchWidth         =   8  
+decodeWidth        =   8 
+issueWidth         =   8 
 localPredictorSize =   1024
 BTBEntries         =   512
 BTBTagSize         =   9
